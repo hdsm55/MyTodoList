@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="/styles/main.css" />
+    <!-- Fonts links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <title>TODO LIST</title>
+  </head>
+
+  <body>
+    <img src="/images/background.jpg" />
+    <div class="date">
+      <a href="/workTasks"> Work Tasks</a>
+      <br />
+      <a href="/"> Today Tasks</a>
+      <h3>
+        <% const d = new Date().toLocaleDateString('en-us', { weekday:"long",
+        year:"numeric", month:"short", day:"numeric"}) %> <%= d %>
+      </h3>
+    </div>
+    <div class="inputTasks">
+      <h1>My To Do List (Today)</h1>
+      <form action="/allTodayTasks" method="POST">
+        <input
+          type="text"
+          id="new-task"
+          name="myNewTask"
+          placeholder="Add a new task"
+          autocomplete="off"
+          required
+        />
+        <button id="add-task">Add</button>
+      </form>
+
+      <ul>
+        <%if (locals.myNewTask){ locals.myNewTask.forEach((Task) => { %>
+        <form class="task-check">
+          <input type="checkbox" name="doneTask" id="doneTask" value="" />
+          <li class=""><%= Task %></li>
+        </form>
+        <%});} %>
+      </ul>
+    </div>
+  </body>
+</html>

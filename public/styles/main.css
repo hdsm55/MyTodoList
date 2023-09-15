@@ -1,0 +1,125 @@
+img {
+  height: 200px;
+  /* set the img width from right to left */
+  width: 100%;
+  object-fit: cover;
+  /* Put something on the picture that erases the details */
+
+}
+
+img:hover {
+  filter: blur(1px);
+  transition: filter 0.5s;
+}
+
+p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(248, 118, 118);
+}
+
+.inputTasks {
+  padding-left: 40px;
+}
+
+h1 {
+  padding-top: 0px;
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-bottom: 0px;
+}
+
+body {
+  background: #102C57;
+  font-family: 'Lilita One', cursive;
+  margin: 0px;
+  padding: 0px;
+  color: #F8F0E5;
+
+}
+
+
+
+#new-task {
+  border: #ffffff;
+  border-bottom: 2px solid #DAC0A3;
+  padding: 10px;
+  font-size: 16px;
+  outline: none;
+  background-color: #102C57;
+  color: #DAC0A3;
+  margin-top: 20px;
+  padding-right: 80px;
+}
+
+#new-task::placeholder {
+  color: #F8F0E5;
+  ;
+  /* Set the color of the placeholder text to white (#fff) */
+}
+
+#new-task:focus {
+  border: #ffffff;
+  border-bottom: 2px solid #ee2020;
+  border-color: #DAC0A3;
+  box-shadow: #DAC0A3;
+}
+
+
+
+#add-task {
+  background-color: #DAC0A3;
+  /* Green background color */
+  color: #102C57;
+  /* White text color */
+  padding: 10px 20px;
+  /* Padding for the button */
+  border: none;
+  /* Remove the button border */
+  cursor: pointer;
+  /* Change cursor to a pointer on hover */
+  margin-left: 20px;
+  border-bottom: 2px solid #DAC0A3;
+  border-color: #F8F0E5;
+}
+
+#add-task:hover {
+  border-bottom: 2px solid #F8F0E5;
+  background-color: #DAC0A3;
+  /* Darker green color on hover */
+}
+
+ul {
+  padding: 0px 10px;
+}
+
+li {
+  font-size: 25px;
+  list-style-type: none;
+}
+
+.task-check {
+  display: flex;
+  width: 264px;
+  padding: 25px 5px;
+  margin: 5px 0px;
+  background-color: #0f3670;
+}
+
+.content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.checked {
+  font-size: 25px;
+  list-style-type: none;
+  text-decoration: line-through;
+  color: #888;
+}
+
+
+input:checked + li {
+  text-decoration: line-through;
+  text-decoration-color: #ffffff;
+}
